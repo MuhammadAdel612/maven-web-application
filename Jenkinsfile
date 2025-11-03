@@ -15,7 +15,7 @@ pipeline {
    stages {
        stage ('git checkout') {
            steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs: [[url: 'https://github.com/MuhammadAdel612/Hello_World.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs: [[url: 'https://github.com/MuhammadAdel612/maven-web-application.git']]])
            }
        }
        stage ('build maven and copy war file') {
