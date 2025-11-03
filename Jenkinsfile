@@ -22,7 +22,7 @@ pipeline {
            steps {
                sh '''
                mvn clean package
-               cp /var/lib/jenkins/workspace/test/webapp/target/webapp.war .
+              
                '''
                
            }
