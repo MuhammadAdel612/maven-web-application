@@ -1,2 +1,4 @@
-FROM tomcat:9.0-jdk11
-COPY target/maven-web-application.war /usr/local/tomcat/webapps/maven-web-application.war
+FROM tomcat:latest
+RUN cp -R  /usr/local/tomcat/webapps.dist/*  /usr/local/tomcat/webapps
+COPY ./*.war /usr/local/tomcat/webapps
+
