@@ -21,7 +21,7 @@ pipeline {
        stage ('build maven and copy war file') {
            steps {
                sh '''
-               mvn clean package
+               mvn package
                cp /var/lib/jenkins/workspace/test/webapp/target/webapp.war .
                '''
                
